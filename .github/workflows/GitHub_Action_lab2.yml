@@ -1,0 +1,45 @@
+name: Lab 2 - Daily Iris Validation
+
+on:
+  schedule:
+    - cron: '0 1 * * 1-5' #  9:00 AM Beijing time on workdays
+  workflow_dispatch:      #  Allows manual triggering for debugging
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 获取完整历史 / Fetch full history
+
+      - name: Check for changes in Lab 2
+        id: check_changes
+        run: |
+          COUNT=$(git log --oneline --since="24 hours ago" -- "GitHub_Action/lab2" | wc -l)
+          echo "count=$COUNT" >> $GITHUB_OUTPUT
+
+      - name: Set up Python
+        if: steps.check_changes.outputs.count != '0'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        if: steps.check_changes.outputs.count != '0'
+        run: pip install scikit-learn
+
+      - name: Run Validation and Generate Report
+        if: steps.check_changes.outputs.count != '0'
+        run: |
+          # Run script and capture output
+          ACC=$(python "GitHub_Action/lab2/check_iris.py")
+          
+          # Write Markdown summary
+          echo "##  Iris Model validation Report" >> $GITHUB_STEP_SUMMARY
+          echo "| Check | Result |" >> $GITHUB_STEP_SUMMARY
+          echo "| :--- | :--- |" >> $GITHUB_STEP_SUMMARY
+          echo "| Running Time | $(date) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Model Accuracy | $ACC |" >> $GITHUB_STEP_SUMMARY
+          echo "| Status | Passed |" >> $GITHUB_STEP_SUMMARY

@@ -20,4 +20,4 @@ jobs:
 
       - name: Run Lab 1 Script
 
-        run: python lab1/lab1_script.py
+        run: python "GitHub_Action/lab1/lab1_script.py"
