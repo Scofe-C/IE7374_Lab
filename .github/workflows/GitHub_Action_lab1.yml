@@ -2,6 +2,19 @@ name: lab1
 on: [push]
 
 jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 #  Fetch full history
+
+      - name: Check for changes in Lab 2
+        id: check_changes
+        run: |
+          COUNT=$(git log --oneline --since="24 hours ago" -- "GitHub_Action/lab2" | wc -l)
+          echo "count=$COUNT" >> $GITHUB_OUTPUT
   build-and-run:
     runs-on: ubuntu-latest
     steps:
