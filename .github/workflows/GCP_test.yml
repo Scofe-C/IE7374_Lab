@@ -29,11 +29,27 @@ jobs:
         run: |
           pip install google-cloud-storage
 
-      # 新增：执行上传脚本 🚛
+      #
       - name: 'Upload to GCS'
         env:
-          # 定义存储桶名称，你可以自己取个名字
           GCP_BUCKET_NAME: 'ie7374-lab-data-${{ secrets.GCP_PROJECT_ID }}'
         run: |
-        
           python GCP/Lab1/upload_to_gcs.py
+          
+
+      - name: 'List bucket contents'
+        run: |
+          gcloud storage ls --recursive gs://ie7374-lab-data-${{ secrets.GCP_PROJECT_ID }}/
+          
+
+      - name: 'Download from GCS'
+        env:
+          GCP_BUCKET_NAME: 'ie7374-lab-data-${{ secrets.GCP_PROJECT_ID }}'
+        run: |
+          python GCP/Lab1/download_from_gcs.py
+          
+
+      - name: 'Verify Local File'
+        run: |
+          echo "Checking data folder content..."
+          ls -R data/

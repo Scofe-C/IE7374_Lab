@@ -1,0 +1,41 @@
+name: gcp_training
+
+on:
+  push:
+    branches: [ main ]  # Trigger on push to main branch
+  workflow_dispatch: #  Allows manual trigger
+
+jobs:
+  train-on-vertex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # 1. Authenticate with Google Cloud
+      - id: 'auth'
+        name: 'Authenticate to Google Cloud'
+        uses: 'google-github-actions/auth@v1'
+        with:
+          workload_identity_provider: '${{ secrets.GCP_WIF_PROVIDER }}'
+          service_account: '${{ secrets.GCP_SA_EMAIL }}'
+
+      # 2. Set up Cloud SDK
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v1'
+
+      # 3.Set up Python
+      - name: 'Set up Python'
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      # 4. Install Dependencies
+      - name: 'Install Dependencies'
+        run: |
+          pip install google-cloud-aiplatform torchvision torch
+
+      # 5.Launch the Job
+      - name: 'Run Launch Script'
+        run: |
+          python GCP/Lab1/launch_job.py
