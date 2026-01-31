@@ -1,0 +1,31 @@
+name: GCP_test
+
+on:
+  push:
+    branches: [ "main" ] # Trigger on push to main branch
+
+jobs:
+  auth-test:
+    runs-on: ubuntu-latest
+    #  Essential permissions for OIDC token generation
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+    steps:
+      - name: Checkout code
+        uses: 'actions/checkout@v4'
+
+      - name: Google Auth
+        id: 'auth'
+        uses: 'google-github-actions/auth@v2'
+        with:
+          # 使用你在 Secrets 中存好的变量 | Using variables stored in your Secrets
+          workload_identity_provider: '${{ secrets.GCP_WIF_PROVIDER }}'
+          service_account: '${{ secrets.GCP_SA_EMAIL }}'
+
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v2'
+
+      - name: 'Verify Login'
+        run: 'gcloud auth list' #  Check currently logged-in account
