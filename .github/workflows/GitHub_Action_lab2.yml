@@ -1,8 +1,8 @@
-name: Lab 2 - Daily Iris Validation
+name: Lab 2 - Daily Iris Model Validation
 
 on:
   schedule:
-    - cron: '0 1 * * 1-5'  # 9:00 AM Beijing time on workdays
+    - cron: '0 1 * * 1-5'  # 9:00 AM Beijing time on weekdays
   push:
     paths:
       - 'GitHub_Action/lab2/**'
@@ -15,11 +15,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Needed for git log check on scheduled runs
+          fetch-depth: 0  # Required for git log on scheduled runs
 
-      - name: Check for changes in Lab 2
+      - name: Check for recent changes (scheduled runs only)
         id: check_changes
-        if: github.event_name == 'schedule'  # Only check on scheduled runs
+        if: github.event_name == 'schedule'
         run: |
           COUNT=$(git log --oneline --since="24 hours ago" -- "GitHub_Action/lab2" | wc -l)
           echo "count=$COUNT" >> $GITHUB_OUTPUT
@@ -34,16 +34,26 @@ jobs:
         if: github.event_name != 'schedule' || steps.check_changes.outputs.count != '0'
         run: pip install scikit-learn
 
-      - name: Run Validation and Generate Report
+      - name: Run Validation
         if: github.event_name != 'schedule' || steps.check_changes.outputs.count != '0'
+        id: run_validation
         run: |
-          # Run script and capture output
           ACC=$(python "GitHub_Action/lab2/check_iris.py")
-          
-          # Write Markdown summary
+          echo "accuracy=$ACC" >> $GITHUB_OUTPUT
+
+      - name: Write Job Summary
+        if: always() && (github.event_name != 'schedule' || steps.check_changes.outputs.count != '0')
+        run: |
+          ACC="${{ steps.run_validation.outputs.accuracy }}"
+          if [ "${{ steps.run_validation.outcome }}" == "success" ]; then
+            STATUS="✅ Passed"
+          else
+            STATUS="❌ Failed"
+          fi
           echo "## 🔍 Iris Model Validation Report" >> $GITHUB_STEP_SUMMARY
           echo "| Check | Result |" >> $GITHUB_STEP_SUMMARY
           echo "| :--- | :--- |" >> $GITHUB_STEP_SUMMARY
-          echo "| Running Time | $(date) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Run Time | $(date) |" >> $GITHUB_STEP_SUMMARY
           echo "| Model Accuracy | $ACC |" >> $GITHUB_STEP_SUMMARY
-          echo "| Status | ✅ Passed |" >> $GITHUB_STEP_SUMMARY
+          echo "| Threshold | 0.95 |" >> $GITHUB_STEP_SUMMARY
+          echo "| Status | $STATUS |" >> $GITHUB_STEP_SUMMARY
