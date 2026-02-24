@@ -1,0 +1,81 @@
+id,subject,body,label
+0,Monthly expense report due,Please submit your expense reports by the 5th for timely reimbursement.,0
+1,Code freeze reminder - release v2.4,Code freeze for v2.4 is this Friday at 5pm. Please wrap up open PRs.,0
+2,Exclusive: Make $500/day from home,Join thousands earning from home. No experience needed. Sign up free!,1
+3,Re: design review feedback,Thanks for sharing the mockups! Left some comments in Figma - please take a look.,0
+4,YOU HAVE BEEN SELECTED - Respond now,You are one of 10 selected for our exclusive cash giveaway.,1
+5,Your flight itinerary - LAX to JFK,Attached is your confirmed itinerary for your March 14 flight to New York.,0
+6,You won a $500 Amazon voucher!,Respond within 24 hours to claim your reward. Click here.,1
+7,Re: contract renewal discussion,Following up from our call - attached is the updated contract draft.,0
+8,Office closed Friday - public holiday,Reminder that the office will be closed this Friday for the holiday.,0
+9,Invoice attached - payment required today,See attached invoice for $899. Pay immediately to avoid late fees.,1
+10,"FREE MONEY - No catch, limited slots!",Government relief funds available. Apply now before slots run out.,1
+11,IT: scheduled maintenance Sunday 2-4am,Systems will be unavailable Sunday Feb 22 between 2am and 4am for maintenance.,0
+12,Slack is down - use email for now,We're experiencing Slack issues. Use email until further notice. ETA 30 min.,0
+13,You have a secret admirer on our site,Someone likes you! Sign up free to see who at http://meet-singles.biz,1
+14,Lunch order - what do you want?,We're doing a group lunch order from Chipotle. Reply by noon.,0
+15,Coffee chat - Thursday at 3pm?,Would love to catch up. Are you free Thursday afternoon for a quick chat?,0
+16,ALERT: Your computer is infected,We detected 5 viruses on your device. Call 1-800-FIX-NOW immediately.,1
+17,Re: pull request #841 review request,"Hey, could you take a look at my PR when you get a chance? No rush.",0
+18,Your subscription receipt - $12.99/month,Thank you for subscribing. Your receipt for February is attached.,0
+19,Your PayPal account has been limited,Action required: confirm your identity at http://paypal-secure.xyz,1
+20,New documentation site launched,The new developer docs site is live at docs.example.com. Feedback welcome.,0
+21,New hire: Sarah joining marketing Monday,Please join us in welcoming Sarah Chen to the marketing team starting Monday!,0
+22,Congratulations! You are our lucky winner,"You won our monthly draw. Click to collect your $2,000 cash prize.",1
+23,Data pipeline incident - post-mortem,Attached is the post-mortem for last Tuesday's outage. RCA and action items included.,0
+24,Verify identity or account will be closed,Mandatory verification required. Failure to act will result in closure.,1
+25,URGENT: Your Netflix subscription expired,Reactivate now to avoid losing your account: http://netflix-renew.co,1
+26,Welcome to the engineering team!,Hi! I'm your onboarding buddy. Let's set up a 30-min intro call.,0
+27,Weekly engineering digest - Feb 2026,"Here's your weekly summary of PRs merged, incidents, and upcoming releases.",0
+28,RE: Transfer confirmation needed,"Please confirm the $7,800 transfer by replying with your PIN.",1
+29,Library book due back next Monday,Just a heads up - your borrowed book is due back on Monday the 10th.,0
+30,Cheap meds - no prescription required,"Order Viagra, Xanax online. Discreet shipping. Best prices. Click here.",1
+31,Final notice: Update your billing information,Your subscription will cancel unless you update your card details.,1
+32,Graduation ceremony details,Please find attached the schedule and dress code for the May ceremony.,0
+33,WIN $1000 GIFT CARD - Claim Now!!,Congratulations! You've been selected. Click to claim your prize.,1
+34,Your package could not be delivered,Confirm your address and pay $1.99 redelivery fee at http://delivery-fix.net,1
+35,Alert: Direct deposit failed,"Your payroll deposit of $2,340 was returned. Verify your account now.",1
+36,Password expiry notice - act immediately,Your password expires in 24 hours. Reset it now at http://pwd-reset.info,1
+37,Team standup at 10am tomorrow,"Hi everyone, quick reminder about our standup. Agenda in the calendar invite.",0
+38,Dear customer: card verification needed,Your debit card requires verification. Provide your card number now.,1
+39,FREE iPhone 14 - Limited time offer!!!,Act fast! Only 10 left. Claim your free iPhone now.,1
+40,Alert: Unusual sign-in activity detected,Someone tried to access your account. Verify at http://login-alert.net,1
+41,RE: presentation draft feedback,Looks great overall! A few minor edits on slides 4 and 7 - see comments.,0
+42,Thanks for the great review!,Saw your review on Glassdoor - thank you so much. It means a lot to the team.,0
+43,BANK ALERT: Transaction declined - verify now,Your recent transaction was blocked. Confirm your identity immediately.,1
+44,Book club: what did you think?,Really curious to hear your thoughts on chapter 8 before our Thursday call.,0
+45,You have unclaimed funds waiting,"A sum of $4,300 is pending release. Confirm your details to proceed.",1
+46,Performance review cycle starts next week,Self-assessments open Monday. Deadline to complete is March 28th.,0
+47,Quarterly all-hands: calendar invite attached,Please accept the invite for our Q1 all-hands on March 15 at 2pm.,0
+48,Re: Your loan application APPROVED,"Congratulations! $10,000 approved. Provide your account number to proceed.",1
+49,Dentist appointment reminder - Tuesday 3pm,This is a reminder for your appointment at Dr. Kim's office on Tuesday.,0
+50,Urgent: Verify your account immediately,Your account will be suspended. Click here to verify now!,1
+51,AWS bill for January - $234.12,Your AWS invoice for January 2026 is now available in the billing console.,0
+52,Team offsite - save the date April 3-4,Block your calendars for the spring offsite in Austin. More details soon.,0
+53,HR: Mandatory salary survey - respond by EOD,All staff must complete this survey or forfeit this month's bonus.,1
+54,Re: vendor contract terms,Reviewed the terms - fine with sections 3 and 4 but need to discuss section 7.,0
+55,Fwd: onboarding documents - please sign,"Hi, forwarding the onboarding docs from HR. Please e-sign by end of week.",0
+56,Get rich quick - proven system,"Our members earned $10,000 last month. Join now for just $9.99!",1
+57,Your crypto wallet has been compromised,Secure your funds now: http://wallet-protect.biz - act within 1 hour.,1
+58,Your order has shipped - arrives Thursday,Your order #334-2891 has been dispatched and will arrive by Thursday.,0
+59,Q3 budget review - please prepare slides,"Hi, we need updated budget slides for Thursday's leadership meeting.",0
+60,Interview feedback due by Friday,Please submit your feedback for today's candidate in Greenhouse by EOD Fri.,0
+61,Special offer: 90% OFF today only,Hurry! This exclusive deal expires in 1 hour. Buy now!!,1
+62,Homework feedback - great job on part 2,Really solid work on the analysis. A few suggestions on the conclusion section.,0
+63,Re: conference talk proposal accepted,Congratulations! Your proposal has been accepted for NeurIPS 2026.,0
+64,Your parking permit renewal,Your annual permit expires March 31. Renew online at the facilities portal.,0
+65,Your Google account login from new device,If this wasn't you click here immediately: http://google-verify.co,1
+66,Fwd: Urgent wire transfer required,"Please process $3,500 wire to this account today. Very urgent.",1
+67,Re: hiring panel for senior eng role,Happy to join the panel. Please share the candidate's resume when available.,0
+68,Python meetup this Thursday - register now,Join us Thursday for talks on async Python and ML pipelines. Free registration.,0
+69,You have a pending payment of $850.00,Release your funds by verifying your bank details immediately.,1
+70,Project Orion: kickoff meeting notes,Attached are the notes from yesterday's kickoff. Action items highlighted.,0
+71,Confirm your email or lose access,This is your last warning. Verify your email at http://confirm-now.biz,1
+72,Gym membership auto-renewed,Your gym membership was renewed on Feb 1. Receipt is attached.,0
+73,Security breach: change your password NOW,We detected a breach. Reset your password immediately at http://reset.xyz,1
+74,Act now: IRS tax refund pending,"You are owed $1,240. Submit your SSN to process your refund today.",1
+75,Limited offer: free credit score check,Check your score and claim $200 bonus cash. Offer expires tonight.,1
+76,Invoice #8821 payment overdue URGENT,Your overdue balance of $340 must be paid now. Avoid legal action.,1
+77,Free vacation package - you qualify!,You and a guest qualify for 5 nights in Cancun. Claim before midnight.,1
+78,ACCOUNT SUSPENDED - Immediate action required,Log in now to restore access: http://secure-login.info,1
+79,Claim your inheritance of $2.5 million,You have been named as beneficiary. Contact us with your bank details.,1

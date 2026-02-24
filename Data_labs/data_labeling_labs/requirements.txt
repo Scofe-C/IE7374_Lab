@@ -1,0 +1,14 @@
+# Core weak supervision framework
+snorkel==0.9.8
+
+# Data and ML
+pandas==1.5.3
+numpy==1.24.4
+scikit-learn==1.3.2
+
+# Plotting
+matplotlib==3.7.5
+
+# Notebook support
+ipykernel
+jupyter
