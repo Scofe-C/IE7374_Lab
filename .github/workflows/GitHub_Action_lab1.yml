@@ -1,11 +1,12 @@
-name: lab1
+name: Lab 1 - Automated Data Fetching
+
 on:
   push:
     paths:
       - 'GitHub_Action/lab1/**'
 
 jobs:
-  build-and-run:
+  fetch-and-validate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -19,7 +20,7 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install -r GitHub_Action/lab1/requirements.txt
 
-      - name: Run Lab 1 Script
+      - name: Fetch and Validate Data
         run: python "GitHub_Action/lab1/lab1_script.py"
